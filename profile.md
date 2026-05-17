@@ -19,7 +19,7 @@
 |------|-----|
 | 用户名 | **[@My-Legal-AI-Journey](https://github.com/My-Legal-AI-Journey)** |
 | 本机 `gh` 登录 | 已登录（2026-05-17 检测） |
-| 学习仓库（计划） | `ai-web3-school-cohort-0`（public，待 push） |
+| 学习仓库 | https://github.com/My-Legal-AI-Journey/ai-web3-school-cohort-0 |
 
 ## 工具栈
 
