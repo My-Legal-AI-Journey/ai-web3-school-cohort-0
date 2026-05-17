@@ -1,63 +1,78 @@
 # 个人学习计划 — Week 1
 
-> 基于 [Handbook](https://aiweb3.school/zh/handbook/) 与共学营 Week 1 大纲。  
-> 画像：**AI 熟悉 + Web3 新手 + 能独立开发**。
+> 画像：**AI 实操型（vibe coding）+ Web3 新手 + 法律方向 + 每晚 2h**  
+> Handbook：https://aiweb3.school/zh/handbook/
 
-## Week 1 目标（最小集）
+## 你的学习原则（Agent 会按这个拆任务）
 
-- [ ] 理解 LLM / prompt / workflow / agent / tool use 边界
-- [ ] 完成测试网：钱包 → 领币 → 转账 → 浏览器验证
-- [ ] 部署最小合约并完成一次读 + 一次写
-- [ ] 完成一次 **AI 生成 → 人工复核 → 钱包确认 → 链上验证** 交叉实验
-- [ ] 本 repo 有可提交的 PoW（commit、daily、experiments）
+- **每天只追求「最小路径」完成**；推荐路径有余力再做。
+- **不写复杂代码**：让 Claude Code 生成；你只改文字、点按钮、抄链接。
+- **法律视角**：关注留痕、人工确认、可验证记录 — 与 Week 1「AI 输出 → 人审 → 链上验证」同构。
 
-## 阅读路径（按 Handbook 四层地图）
+## Week 1 目标（2 小时/晚可完成版）
 
-### 已具备基础 — 快速扫读
+| 目标 | 做法 |
+|------|------|
+| 懂基础概念 | 每天 15–20 分钟 Handbook + Agent 用中文解释 |
+| AI 工具实践 | Claude Code 整理笔记 / 生成 quiz 或流程图 |
+| 测试网 | MetaMask + Sepolia，按 checklist 一步一步 |
+| 最小合约 | **Remix 点选部署**（不强制 Hardhat） |
+| 交叉实验 | AI 写步骤 → 你复核 → 钱包确认 → 浏览器截图 |
+| PoW | `daily/` + 链接进 repo，能打卡即可 |
 
-- AI 基础：重点看 [Agent Workflow](https://aiweb3.school/zh/handbook/bridge/agent-workflow/) 中与 human-in-the-loop 相关的边界
-- 你已有 Skills 实践，可对照 Handbook 补术语即可
+## 阅读路径（法律学员精简版）
 
-### 本周主攻 — 逐节阅读
+### 每晚 15 分钟阅读（按顺序）
 
-| 优先级 | Handbook 章节 | 目的 |
-|--------|-----------------|------|
-| P0 | [Web3 基础](https://aiweb3.school/zh/handbook/) 侧边栏 — 账户/钱包/交易相关 | 测试网操作语言 |
-| P0 | [Web3 Tool Use](https://aiweb3.school/zh/handbook/bridge/web3-tool-use/) | Agent 如何调用链上工具（理论） |
-| P0 | [Agent Workflow](https://aiweb3.school/zh/handbook/bridge/agent-workflow/) | 交叉实验流程设计 |
-| P1 | [Agent Wallet](https://aiweb3.school/zh/handbook/bridge/agent-wallet/) | 权限与「Agent 不碰私钥」 |
-| P1 | [AI Security](https://aiweb3.school/zh/handbook/bridge/ai-security/) | 输出验证、越权防护 |
-| P2 | [Chain-aware Context](https://aiweb3.school/zh/handbook/bridge/chain-aware-context/) | Week 2 预热 |
+1. Handbook 首页 — 四层地图（已读可跳过）
+2. Web3 基础 — 账户、钱包、签名、交易（侧边栏）
+3. [Agent Workflow](https://aiweb3.school/zh/handbook/bridge/agent-workflow/) — **重点**：哪些必须人工
+4. [Agent Wallet](https://aiweb3.school/zh/handbook/bridge/agent-wallet/) — Agent 不能拿私钥
+5. [Verifiable AI](https://aiweb3.school/zh/handbook/bridge/verifiable-ai/) — 与法律「可验证材料」对照（可选）
 
-## 7 天执行节奏（可调整）
+### 可暂缓（Week 1 不强制）
 
-| 天 | 最小路径 | 推荐路径 | 挑战路径 |
-|----|----------|----------|----------|
-| D1 | 确认画像；`gh auth login`；完善 `profile.md` | 创建 GitHub 远程 repo 并 push | 配置 WCB Agent API（仅本地 secret） |
-| D2 | 读 Handbook Web3 账户概念；安装 MetaMask | Sepolia 领测试币 | 对比 EOA vs 智能账户阅读笔记 |
-| D3 | 发送 1 笔测试转账 + Etherscan 记录 | 写 `tasks/web3-wallet-lab.md` | 第二笔转账给不同地址 |
-| D4 | Remix 部署 Storage 合约 | 一次 `set` + 一次 `get` + 浏览器链接 | Hardhat/Foundry 本地部署 |
-| D5 | Claude Code 生成交叉实验步骤文档 | 执行交叉实验并写 `experiments/cross-01.md` | 画完整 workflow + 失败点 |
-| D6 | 可交互 demo（quiz 或流程图）入 `experiments/` | README 写 agent vs 人工分工 | 两工具对比（Claude Code vs Cursor） |
-| D7 | 整理 `submissions/week1-pow.md` | 行业观察 3 条笔记 | 进阶：ETH skill 或 OpenClaw 阅读笔记 |
+- Hardhat / Foundry 工程化
+- 模型微调、LoRA
+- 进阶账户抽象实操
+
+## 7 天节奏（每天 19:00–21:00）
+
+| 天 | 19:00–19:40 | 19:40–20:40 | 20:40–21:00 |
+|----|-------------|-------------|-------------|
+| **D1 一** | 读 `profile.md`；`gh` 已登录则 **创建远程 repo 并 push** | Claude Code：根据本文件生成 **概念卡片**（LLM/agent/钱包） | 写 `daily/`，提交打卡草稿 |
+| **D2 二** | Handbook：账户与钱包（20 分钟） | 安装 MetaMask + 新建**共学营钱包** | 笔记 `tasks/web3-wallet-lab.md`（不写私钥） |
+| **D3 三** | 切换 Sepolia + 领测试币 | 发 1 笔小额转账 | Etherscan 抄 tx hash 进笔记 |
+| **D4 四** | 看 Remix 入门视频/文档（15 分钟） | Remix 部署 Storage，**只点界面** | 记录合约地址 + 浏览器链接 |
+| **D5 五** | Claude Code：写「交叉实验步骤」 | 你按步骤复核 + 钱包确认 1 次写入 | `experiments/cross-01.md` |
+| **D6 六** | Agent 生成 **流程图**（AI→人审→链上） | 放入 `experiments/`，README 写分工 | 补 Week1 checklist |
+| **D7 日** | 整理 `submissions/week1-pow.md` | 3 条行业观察（法律×AI×链） | 打卡 + 休息 |
+
+## 给 Claude Code 的固定口令（可复制）
+
+```text
+我是法律背景学员，不会独立写代码。请用中文、分步骤、不要跳步：
+1）今天要完成：[粘贴 learning-plan 当天任务]
+2）输出：勾选清单 + 我需要点哪里 + 常见问题
+3）不要让我一次性做超过 30 分钟的事
+```
 
 ## Week 1 交付清单
 
-| 交付物 | 文件/位置 |
-|--------|-----------|
-| Learning Agent 配置 | `agent-config.md` |
-| 学习日志 | `daily/` |
-| Web3 实验记录 | `tasks/web3-*.md` |
+| 交付物 | 位置 |
+|--------|------|
+| 学习计划 / 画像 | 本文件、`profile.md` |
+| 每日打卡 | `daily/` |
+| Web3 笔记 | `tasks/web3-wallet-lab.md` |
 | 交叉实验 | `experiments/cross-01.md` |
-| Handbook 反馈 | `handbook-feedback/` |
-| 打卡 / WCB 提交 | `daily/` 内链接 + `submissions/` |
+| 汇总提交 | `submissions/week1-pow.md` |
 
-## 不懂问题清单（持续更新）
+## 不懂问题清单
 
-1. Session Key / 账户抽象在 Week 1 需要实操到什么程度？
-2. WCB 打卡与 repo commit 的对应关系是否有一对一 rubric？
-3. 兼容 API 下 Claude Code 的 tool use 与官方差异如何记录为 PoW？
+1. 法律场景里，链上「可验证」和诉讼证据标准差在哪里？
+2. vibe coding 完成的 demo 算不算合格 PoW？
+3. Week 2 支付/身份是否和法律文书送达有类比？
 
 ---
 
-*下次更新：完成 Web3 第一天实验后，由 Agent 根据 `daily/` 进展修订本表。*
+*Agent 每晚可根据 `daily/` 把「明天最小路径」缩成 3 条以内。*
